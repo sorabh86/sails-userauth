@@ -50,3 +50,24 @@ Generate sails api
 $ sails generate api user
 ```
 
+
+## Experience in full SDLC
+* AngularJS (1.0, 2.0) Apps
+* PHP webstites
+* JavaScript (ECMA Script 5|6)
+* Flash | Flex | flexsdk
+* Frameworks | Wordpress | Magento 
+* Mobile (Android | Window | IPHONE), Desktop Application
+* Databases (Relational Databases | MySQL, NoSQL | MongoDB )
+## `Contact Us`
+SKYPE : ssorabh.ssharma
+
+email : ssorabh.ssharma@hotmail.com
+
+github : https://github.com/sorabh86
+
+-----------
+
+© copyright to expertcodedesign.com on 2016 
+
+-----------
