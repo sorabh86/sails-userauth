@@ -2,9 +2,11 @@ angular.module('LoginMod')
 
 .controller('LoginCtrl', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
 	$scope.runLogin = function(){
+		console.log($scope.password);
+
 		$http.put('/login',{
-			email:$scope.email,
-			password:$scope.password
+			email: $scope.email,
+			password: $scope.password
 		}).then(function(res){
 			window.location = '/';
 		}).catch(function(err){

@@ -51,6 +51,39 @@ module.exports = {
 				})
 			}
 		})
+	},
+	login : function(req, res) {
+		// Validate User
+		User.findOne({
+			email: req.param('email')
+		}, function foundUser(err, usr){
+			if(err) {
+				return res.negotiate(err);
+			}
+			if(!usr) {
+				return res.notFound();	
+			}
+
+			console.log(req.param('password'), usr);
+			require('machinepack-passwords').checkPassword({
+				passwordAttempt: req.param('password'),
+				encryptedPassword : usr.password
+			}).exec({
+				error: function(err){
+					console.log('PASSWORD ERROR');
+					return res.negotiate(err);
+				},
+				incorrect: function(){
+					console.log('PASSWORD INCORRECT');
+					return res.notFound();
+				},
+				success: function() {
+					// req.session.me = user.id;
+					console.log('SUCCESS');
+					return res.ok();
+				}
+			});
+		});
 	}
 };
 
