@@ -8,7 +8,7 @@ User Authorization Application have both fronthand & backhand. It is running on 
 * [Foundation Zurb](https://foundation.zurb.com/)
 * Toastr messaging module
 * [Node Machine Pack](http://node-machine.org/)
-  * passwords (.checkPassword() | .encriptPassword())
+  * passwords (.checkPassword() | .encryptPassword())
   ```
   $ npm install machinepack-passwords --save
   var Passwords = require('machinepack-passwords');

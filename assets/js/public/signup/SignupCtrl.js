@@ -9,7 +9,7 @@ angular.module('SignupMod')
 			email:$scope.email,
 			password:$scope.password
 		}).then(function (res){
-
+			console.log('successfully signup');
 		},function(err){
 			console.log('Error: ', err);
 		});

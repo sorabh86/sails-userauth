@@ -13,19 +13,14 @@
   <link rel="stylesheet" href="/styles/importer.css">
   <!--STYLES END-->
 </head>
-<body ng-app="SignupMod" ng-controller="SignupCtrl">
+<body ng-app="LoginMod" ng-controller="LoginCtrl">
   <div class="large-4 large-centered columns">
     <div class="signup-box">
       <div class="row">
         <div class="large-12 columns">
           <h3 class="text-center">User Auth</h3>
-          <p>Please fill in the fields below to Signup</p>
-          <form ng-submit="runSignup()">
-            <div class="row">
-              <div class="large-12 columns">
-                <input type="text" ng-model="name" ng-maxlength="40" name="name" placeholder="Name" required>
-              </div>
-            </div>
+          <p>Please login or create an account</p>
+          <form ng-submit="runLogin()">
             <div class="row">
               <div class="large-12 columns">
                 <input type="email" ng-model="email" name="email" placeholder="Email Address" required>
@@ -37,16 +32,11 @@
               </div>
             </div>
             <div class="row">
-              <div class="large-12 columns">
-                <input type="password" ng-model="password2" ng-maxlength="20" name="password2" placeholder="Password Confirm" required>
-              </div>
-            </div>
-            <div class="row">
               <div class="large-7 columns">
-                <input type="submit" class="button expanded" value="Create Account">
+                <input type="submit" class="button expanded" value="Log In">
               </div>
               <div class="large-5 columns">
-                <a href="/" class="button expanded">Log In</a>
+                <a href="/signup" class="button expanded">Create Account</a>
               </div>
             </div>
           </form>
