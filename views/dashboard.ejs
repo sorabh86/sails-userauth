@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LOGIN</title>
+  <title>DASHBOARD</title>
   
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/angular-toastr.css">
@@ -13,34 +13,33 @@
   <link rel="stylesheet" href="/styles/importer.css">
   <!--STYLES END-->
 </head>
-<body ng-app="LoginMod" ng-controller="LoginCtrl">
-  <div class="large-4 large-centered columns">
-    <div class="signup-box">
-      <div class="row">
-        <div class="large-12 columns">
-          <h3 class="text-center">User Auth</h3>
-          <p>Please login or create an account</p>
-          <form ng-submit="runLogin()">
-            <div class="row">
-              <div class="large-12 columns">
-                <input type="email" ng-model="email" name="email" placeholder="Email Address" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <input type="password" ng-model="password" ng-maxlength="20" name="password" placeholder="Password" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-7 columns">
-                <input type="submit" class="button expanded" value="Log In">
-              </div>
-              <div class="large-5 columns">
-                <a href="/signup" class="button expanded">Create Account</a>
-              </div>
-            </div>
-          </form>
-        </div>
+<body ng-app="DashMod" ng-controller="DashCtrl" ng-init="getUser()">
+  
+
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">Dashboard</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><button class="button">logout</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Dashboard</h2>
+    <div class="row">
+      <div class="large-2 column">
+        <img ng-src="{{user.gravatarUrl}}">
+      </div>
+      <div class="large-8 column">
+        <ul>
+          <li>Name : {{user.name}}</li>
+          <li>Email : {{user.email}}</li>
+          <li>Member Since : {{user.createdAt | date:'MMM dd yyyy'}}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -59,5 +58,6 @@
   <script src="/js/private/dashboard/DashMod.js"></script>
   <script src="/js/private/dashboard/DashCtrl.js"></script>
   <!--SCRIPTS END-->
+
 </body>
 </html>

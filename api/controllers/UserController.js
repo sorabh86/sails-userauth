@@ -64,7 +64,6 @@ module.exports = {
 				return res.notFound();	
 			}
 
-			console.log(req.param('password'), usr);
 			require('machinepack-passwords').checkPassword({
 				passwordAttempt: req.param('password'),
 				encryptedPassword : usr.password
@@ -78,7 +77,8 @@ module.exports = {
 					return res.notFound();
 				},
 				success: function() {
-					// req.session.me = user.id;
+					req.session.me = usr.id;
+
 					console.log('SUCCESS');
 					return res.ok();
 				}
