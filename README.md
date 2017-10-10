@@ -7,6 +7,7 @@ User Authorization Application have both fronthand & backhand. It is running on 
 * Angular-Sails hybrid view
 * [Foundation Zurb](https://foundation.zurb.com/)
 * Toastr messaging module
+* [MongoLab](https://mlab.com/)
 * [Node Machine Pack](http://node-machine.org/)
   * passwords (.checkPassword() | .encryptPassword())
   ```

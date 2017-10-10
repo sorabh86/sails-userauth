@@ -10,6 +10,7 @@ angular.module('SignupMod')
 			password:$scope.password
 		}).then(function (res){
 			console.log('successfully signup');
+			window.location = "/";
 		},function(err){
 			console.log('Error: ', err);
 		});
