@@ -84,6 +84,20 @@ module.exports = {
 				}
 			});
 		});
+	},
+	logout: function(req,res) {
+		User.findOne({id:req.session.me}, function(err, user){
+			if(err) {
+				return req.negotiate(err);
+			}
+			if(!user) {
+				return res.notFound();
+			}
+
+			req.session.me = null;
+
+			return res.redirect('/');
+		});
 	}
 };
 
